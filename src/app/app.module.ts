@@ -6,13 +6,23 @@ import { AppComponent } from './app.component';
 import { ClassificationComponent } from './classification/classification.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
+import {RouterModule, Routes} from '@angular/router';
+import { RegressionComponent } from './regression/regression.component';
 
+const routes: Routes = [
+  {path: 'tree', component: ClassificationComponent},
+  {path: '', redirectTo: '/main', pathMatch: 'full'},
+  {path: 'main', component: ClassificationComponent},
+  {path: 'regression', component: RegressionComponent}
+];
 @NgModule({
   declarations: [
     AppComponent,
-    ClassificationComponent
+    ClassificationComponent,
+    RegressionComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
