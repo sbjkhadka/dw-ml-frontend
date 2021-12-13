@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiServiceService} from '../services/api-service.service';
 import {Form, FormBuilder, FormControl, FormGroup} from '@angular/forms';
-import {ClassificationModel} from './model/classification.model';
 
 @Component({
   selector: 'app-classification',
@@ -50,11 +49,6 @@ export class ClassificationComponent implements OnInit {
               private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    const pl = {payload: [1, 13, 3, 3, 0, 2]};
-    // this.apiService.predictFromClassificationAlgorithm(pl).subscribe(res => {
-    //   console.log(res);
-    //   this.result = res;
-    // });
     this.initializeForm();
   }
 

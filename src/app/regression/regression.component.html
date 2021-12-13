@@ -1,77 +1,69 @@
 <div class="container-fluid w-100" style="padding-left: 200px;padding-right: 200px">
 
-  <h1>Regression (Under construction)</h1>
+  <h1>Logistic Regression</h1>
 
   <div class="container-fluid card-style d-flex flex-row justify-content-around align-items-center">
-<!--    <div-->
-<!--      *ngIf="result"-->
-<!--      [class.text-danger]="result.result === 'STOLEN'"-->
-<!--      [class.text-success]="result.result === 'RECOVERED'">-->
-<!--      <h1>{{result.result}}</h1>-->
-<!--    </div>-->
+    <div
+      *ngIf="result"
+      [class.text-danger]="result.result === 'STOLEN'"
+      [class.text-success]="result.result === 'RECOVERED'">
+      <h1>{{result.result}}</h1>
+    </div>
 
-<!--    <div *ngIf="!result"><strong>Hello!!</strong></div>-->
+    <div *ngIf="!result"><strong>Hello!!</strong></div>
   </div>
-<!--  -->
   <form [formGroup]="regressionForm">
-<!--    <div class="form-group mb-3">-->
-<!--      <label for="Occurrence_DayOfWeek_n" class="bold-label">Occurrence(day of Week)</label>-->
-<!--      <select class="form-control" formControlName="Occurrence_DayOfWeek_n" id="Occurrence_DayOfWeek_n">-->
-<!--        <option value="3">Sunday</option>-->
-<!--        <option value="1">Monday</option>-->
-<!--        <option value="5">Tuesday</option>-->
-<!--        <option value="6">Wednesday</option>-->
-<!--        <option value="4">Thursday</option>-->
-<!--        <option value="0">Friday</option>-->
-<!--        <option value="2">Saturday</option>-->
-<!--      </select>-->
-<!--    </div>-->
 
-<!--    <div class="form-group mb-3">-->
-<!--      <label for="Occurrence_Hour_n" class="bold-label">Occurrence(Hour)</label>-->
-<!--      <input type="number" id="Occurrence_Hour_n" class="form-control" formControlName="Occurrence_Hour_n" min="0" max="23"/>-->
-<!--    </div>-->
+    <div class="form-group mb-3">
+      <label for="daysOfWeek" class="bold-label">Bike Type</label>
+      <select class="form-control" formControlName="daysOfWeek" id="daysOfWeek">
+        <option *ngFor="let type of daysOfWeek" [value]="type.value">{{type.label}}</option>
+      </select>
+    </div>
 
-<!--    <div class="form-group mb-3">-->
-<!--      <label for="Bike_Type_n" class="bold-label">Bike Type</label>-->
-<!--      <select class="form-control" formControlName="Bike_Type_n" id="Bike_Type_n">-->
-<!--&lt;!&ndash;        <option *ngFor="let type of bikeTypes" [value]="type.value">{{type.label}}</option>&ndash;&gt;-->
-<!--      </select>-->
-<!--    </div>-->
+    <div class="form-group mb-3">
+      <label for="neighborhoodName" class="bold-label">Bike Type</label>
+      <select class="form-control" formControlName="neighborhoodName" id="neighborhoodName">
+        <option *ngFor="let type of neighborhoodName" [value]="type.value">{{type.label}}</option>
+      </select>
+    </div>
 
-<!--    <div class="form-group mb-3">-->
-<!--      <label for="Bike_Speed_Range_n" class="bold-label">Bike Speed</label>-->
-<!--      <select class="form-control" formControlName="Bike_Speed_Range_n" id="Bike_Speed_Range_n">-->
-<!--&lt;!&ndash;        <option *ngFor="let bikeSpeed of bikeSpeeds" [value]="bikeSpeed.value">{{bikeSpeed.label}}</option>&ndash;&gt;-->
-<!--      </select>-->
-<!--    </div>-->
+    <div class="form-group mb-3">
+      <label for="locationType" class="bold-label">Bike Type</label>
+      <select class="form-control" formControlName="locationType" id="locationType">
+        <option *ngFor="let type of locationType" [value]="type.value">{{type.label}}</option>
+      </select>
+    </div>
 
-<!--    <div class="form-group mb-3">-->
-<!--      <label for="Bike_Cost_Range_n" class="bold-label">Bike Cost</label>-->
-<!--      <select class="form-control" formControlName="Bike_Cost_Range_n" id="Bike_Cost_Range_n">-->
-<!--&lt;!&ndash;        <option *ngFor="let bikeCost of bikeCosts" [value]="bikeCost.value">{{bikeCost.label}}</option>&ndash;&gt;-->
-<!--      </select>-->
-<!--    </div>-->
+    <div class="form-group mb-3">
+      <label for="bikeType" class="bold-label">Bike Type</label>
+      <select class="form-control" formControlName="bikeType" id="bikeType">
+        <option *ngFor="let type of bikeType" [value]="type.value">{{type.label}}</option>
+      </select>
+    </div>
 
-<!--    <div class="form-group mb-3">-->
-<!--      <label for="Premises_Type_n" class="bold-label">Premise Type</label>-->
-<!--      <select class="form-control" formControlName="Premises_Type_n" id="Premises_Type_n">-->
-<!--        <option value="4">Outside</option>-->
-<!--        <option value="3">House</option>-->
-<!--        <option value="5">Transit</option>-->
-<!--        <option value="2">Educational</option>-->
-<!--        <option value="1">Commercial</option>-->
-<!--        <option value="0">Apartment</option>-->
-<!--      </select>-->
-<!--    </div>-->
+    <div class="form-group mb-3">
+      <label for="bikeSpeedRange" class="bold-label">Bike Type</label>
+      <select class="form-control" formControlName="bikeSpeedRange" id="bikeSpeedRange">
+        <option *ngFor="let type of bikeSpeedRange" [value]="type.value">{{type.label}}</option>
+        <option value="0">Other</option>
+      </select>
+    </div>
 
-<!--    <div class="form-group">-->
-<!--      <button  class="btn btn-outline-primary" type="submit">Check</button> &nbsp;&nbsp;&nbsp;&nbsp;-->
-<!--      <button  class="btn btn-outline-warning">Reset</button>-->
-<!--    </div>-->
+    <div class="form-group mb-3">
+      <label for="bikeCost" class="bold-label">Bike Type</label>
+      <select class="form-control" formControlName="bikeCost" id="bikeCost">
+        <option *ngFor="let type of bikeCost" [value]="type.value">{{type.label}}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <button  class="btn btn-outline-primary" type="submit" (click)="predict()">Check</button> &nbsp;&nbsp;&nbsp;&nbsp;
+      <button  class="btn btn-outline-warning" (click)="resetForm()">Reset</button>
+    </div>
   </form>
   <div class="card mt-3" style="width: 18rem;">
-    <img class="card-img-top" src="https://www.mihaileric.com/static/layer2TreeDiagram-95dec8fbb247ce5161f63e63d8816fed-28303.png" alt="Card image cap">
+    <img class="card-img-top" src="https://miro.medium.com/max/800/0*_9IsvpJHqgzSSMqY.jpg" alt="Card image cap">
   </div>
 </div>
 

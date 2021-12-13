@@ -2,3 +2,11 @@
 .cursor-pointer {
   cursor: pointer;
 }
+.card-style {
+  border-radius: 5px;
+  height: 50px;
+  text-align: center;
+}
+.bold-label {
+  font-weight: bold;
+}
