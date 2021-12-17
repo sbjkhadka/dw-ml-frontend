@@ -28,22 +28,22 @@ export class ClassificationComponent implements OnInit {
   ];
 
   bikeSpeeds = [
-    { label: '6_10', value: '8' },
-    { label: '1_5', value: '2' },
-    { label: '21_25', value: '3' },
-    { label: '16_20', value: '1' },
-    { label: '26_30', value: '4' },
-    { label: '11_15', value: '0' },
-    { label: '31_35', value: '5' },
-    { label: '36_40', value: '6' },
-    { label: '41_45', value: '7' },
+    { label: '1 - 5  KM/h', value: '2' },
+    { label: '6 - 10 KM/h', value: '8' },
+    { label: '11 - 15 KM/h', value: '0' },
+    { label: '16 - 20 KM/h', value: '1' },
+    { label: '21 - 25 KM/h', value: '3' },
+    { label: '26 - 30 KM/h', value: '4' },
+    { label: '31 - 35 KM/h', value: '5' },
+    { label: '36 - 40 KM/h', value: '6' },
+    { label: '41 - 45 KM/h', value: '7' },
   ];
 
   bikeCosts = [
-    { label: '501_1000', value: '3' },
-    { label: '1001_1500', value: '1' },
-    { label: '0_500', value: '0' },
-    { label: '1501_2000', value: '2' }
+    { label: '$0 - $500', value: '0' },
+    { label: '$501 - $1000', value: '3' },
+    { label: '$1001 - $1500', value: '1' },
+    { label: '$1501 - $2000', value: '2' }
   ];
   constructor(private apiService: ApiServiceService,
               private formBuilder: FormBuilder) { }

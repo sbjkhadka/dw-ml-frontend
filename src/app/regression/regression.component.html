@@ -15,35 +15,35 @@
   <form [formGroup]="regressionForm">
 
     <div class="form-group mb-3">
-      <label for="daysOfWeek" class="bold-label">Bike Type</label>
+      <label for="daysOfWeek" class="bold-label">Days of week</label>
       <select class="form-control" formControlName="daysOfWeek" id="daysOfWeek">
         <option *ngFor="let type of daysOfWeek" [value]="type.value">{{type.label}}</option>
       </select>
     </div>
 
     <div class="form-group mb-3">
-      <label for="neighborhoodName" class="bold-label">Bike Type</label>
+      <label for="neighborhoodName" class="bold-label">Neighborhood Name</label>
       <select class="form-control" formControlName="neighborhoodName" id="neighborhoodName">
         <option *ngFor="let type of neighborhoodName" [value]="type.value">{{type.label}}</option>
       </select>
     </div>
 
     <div class="form-group mb-3">
-      <label for="locationType" class="bold-label">Bike Type</label>
+      <label for="locationType" class="bold-label">Location Type</label>
       <select class="form-control" formControlName="locationType" id="locationType">
         <option *ngFor="let type of locationType" [value]="type.value">{{type.label}}</option>
       </select>
     </div>
 
     <div class="form-group mb-3">
-      <label for="bikeType" class="bold-label">Bike Type</label>
-      <select class="form-control" formControlName="bikeType" id="bikeType">
-        <option *ngFor="let type of bikeType" [value]="type.value">{{type.label}}</option>
+      <label for="premiseType" class="bold-label">Premise Type</label>
+      <select class="form-control" formControlName="premiseType" id="premiseType">
+        <option *ngFor="let type of premiseType" [value]="type.value">{{type.label}}</option>
       </select>
     </div>
 
     <div class="form-group mb-3">
-      <label for="bikeSpeedRange" class="bold-label">Bike Type</label>
+      <label for="bikeSpeedRange" class="bold-label">Bike Speed Range</label>
       <select class="form-control" formControlName="bikeSpeedRange" id="bikeSpeedRange">
         <option *ngFor="let type of bikeSpeedRange" [value]="type.value">{{type.label}}</option>
         <option value="0">Other</option>
@@ -51,7 +51,7 @@
     </div>
 
     <div class="form-group mb-3">
-      <label for="bikeCost" class="bold-label">Bike Type</label>
+      <label for="bikeCost" class="bold-label">Bike Cost Range</label>
       <select class="form-control" formControlName="bikeCost" id="bikeCost">
         <option *ngFor="let type of bikeCost" [value]="type.value">{{type.label}}</option>
       </select>
